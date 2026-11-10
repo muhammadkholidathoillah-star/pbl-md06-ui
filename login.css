@@ -1,0 +1,99 @@
+/* ============================================================
+   login.css - khusus halaman login
+   ============================================================ */
+
+/* ---------- Layout Login ---------- */
+.login {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+/* ---------- Hero / Panel Kiri ---------- */
+.hero {
+  background: var(--navy);
+  color: #fff;
+  padding: 56px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.hero h2 {
+  font-size: 42px;
+  line-height: 1.15;
+  max-width: 460px;
+  letter-spacing: -1px;
+}
+
+.hero p {
+  max-width: 420px;
+  color: #cdd5e8;
+  line-height: 1.6;
+}
+
+.hero ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 10px;
+  color: #e8ecf5;
+}
+
+.hero li:before {
+  content: "✓";
+  color: var(--or);
+  font-weight: 800;
+  margin-right: 10px;
+}
+
+/* ---------- Kotak Login / Panel Kanan ---------- */
+.lbox {
+  display: grid;
+  place-items: center;
+  padding: 32px;
+}
+
+.lbox .card {
+  width: 100%;
+  max-width: 420px;
+  padding: 36px;
+}
+
+.lbox form {
+  grid-template-columns: 1fr;
+}
+
+/* ---------- Pesan Error & Hint ---------- */
+.err {
+  color: #c0392b;
+  font-size: 14px;
+  min-height: 18px;
+  margin: 0;
+}
+
+.hint {
+  background: var(--bg);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 14px;
+  color: var(--mut);
+  margin-top: 16px;
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 860px) {
+  .login {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 28px;
+    gap: 20px;
+  }
+
+  .hero h2 {
+    font-size: 28px;
+  }
+}

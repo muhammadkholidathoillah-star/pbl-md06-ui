@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Informasi Produk – Catat Servis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="shell">
+
+    <!-- ================= Sidebar ================= -->
+    <aside>
+      <div class="brand">
+        <div class="logo">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M3 11h18v5H3zM6 16v2M18 16v2"/>
+          </svg>
+        </div>
+        <div>
+          <b>Catat Servis</b>
+          <span>Kendaraan Pribadi</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="dashboard.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h8v10H3zM13 3h8v6h-8zM13 11h8v10h-8zM3 15h8v6H3z"/>
+          </svg>
+          Dashboard
+        </a>
+
+        <a href="kendaraan.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M3 11h18v5H3zM6 16v2M18 16v2"/>
+          </svg>
+          Kendaraan Saya
+        </a>
+
+        <a href="catat-servis.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          Catat Servis
+        </a>
+
+        <a href="riwayat.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/>
+          </svg>
+          Riwayat Servis
+        </a>
+
+        <a href="pengingat.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/>
+          </svg>
+          Pengingat
+        </a>
+
+        <a href="informasi-produk.html" class="on">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/>
+          </svg>
+          Informasi Produk
+        </a>
+
+        <a href="laporan.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4v16h16M8 16v-4M12 16V8M16 16v-6"/>
+          </svg>
+          Laporan
+        </a>
+      </nav>
+
+      <div class="user">
+        <div class="av">M</div>
+        <div>
+          <b>Mahasiswa</b>
+          <small>Pengguna</small>
+        </div>
+        <a href="login.html">Keluar</a>
+      </div>
+    </aside>
+
+    <!-- ================= Main ================= -->
+    <main>
+      <div class="head">
+        <div>
+          <h1>Informasi Produk</h1>
+          <p class="sub">Panduan umum interval perawatan komponen</p>
+        </div>
+        <div class="tools">
+          <div class="search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-4-4"/>
+            </svg>
+            <input id="q" type="search" placeholder="Cari servis, pengingat… (Enter = cari di Riwayat)" aria-label="Cari" autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <div class="grid3">
+        <div class="card">
+          <div class="ic" style="margin-bottom:12px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/>
+            </svg>
+          </div>
+          <b style="font-size:18px">Oli mesin</b>
+          <p class="mut" style="line-height:1.6">Ganti tiap 2.000–3.000 km (motor) atau 5.000–10.000 km (mobil), sesuai rekomendasi pabrikan.</p>
+        </div>
+
+        <div class="card">
+          <div class="ic" style="margin-bottom:12px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/>
+            </svg>
+          </div>
+          <b style="font-size:18px">Kampas rem</b>
+          <p class="mut" style="line-height:1.6">Periksa tiap 10.000 km. Ganti bila tebal kampas sudah tipis atau rem berdecit.</p>
+        </div>
+
+        <div class="card">
+          <div class="ic" style="margin-bottom:12px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/>
+            </svg>
+          </div>
+          <b style="font-size:18px">Ban</b>
+          <p class="mut" style="line-height:1.6">Periksa tekanan tiap minggu. Ganti bila alur ban hampir habis atau usia lebih dari 5 tahun.</p>
+        </div>
+
+        <div class="card">
+          <div class="ic" style="margin-bottom:12px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/>
+            </svg>
+          </div>
+          <b style="font-size:18px">Aki</b>
+          <p class="mut" style="line-height:1.6">Umumnya awet 2–3 tahun. Cek tegangan bila starter terasa berat.</p>
+        </div>
+
+        <div class="card">
+          <div class="ic" style="margin-bottom:12px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/>
+            </svg>
+          </div>
+          <b style="font-size:18px">Busi</b>
+          <p class="mut" style="line-height:1.6">Ganti tiap 8.000–12.000 km agar pembakaran tetap efisien.</p>
+        </div>
+
+        <div class="card">
+          <div class="ic" style="margin-bottom:12px">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/>
+            </svg>
+          </div>
+          <b style="font-size:18px">Filter udara</b>
+          <p class="mut" style="line-height:1.6">Bersihkan tiap 5.000 km dan ganti tiap 15.000–20.000 km.</p>
+        </div>
+      </div>
+
+      <p class="mut">Interval bersifat umum; ikuti buku manual kendaraan Anda.</p>
+
+      <p id="nf" class="mut" hidden>Tidak ada hasil yang cocok dengan pencarian Anda.</p>
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,501 @@
+/* ============================================================
+   base.css - dipakai semua halaman
+   Berisi: tema, reset, sidebar, tombol, form, tabel, responsif
+   ============================================================ */
+
+/* ---------- Tema / Variabel ---------- */
+:root {
+  --navy: #14223f;
+  --navy2: #26334f;
+  --or: #f28c28;
+  --teal: #1f7a8c;
+  --bg: #f5f6fa;
+  --card: #fff;
+  --tx: #14223f;
+  --mut: #5b6478;
+  --line: #e4e7ee;
+  --side-tx: #e8ecf5;
+  box-sizing: border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0e1629;
+    --card: #18233d;
+    --tx: #eef1f8;
+    --mut: #9aa5bd;
+    --line: #2a3654;
+    --navy: #0a1226;
+  }
+}
+
+/* ---------- Reset ---------- */
+html {
+  scroll-padding-top: env(safe-area-inset-top, 0px);
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--tx);
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+  color: inherit;
+}
+
+#app {
+  min-height: 100%;
+}
+
+/* ---------- Layout Utama ---------- */
+.shell {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  min-height: 100vh;
+}
+
+main {
+  padding: 36px 40px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 26px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Tipografi ---------- */
+h1 {
+  margin: 0;
+  font-size: 36px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.sub {
+  color: var(--mut);
+  margin: 4px 0 0;
+}
+
+h2 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+/* ---------- Sidebar ---------- */
+aside {
+  background: var(--navy);
+  color: var(--side-tx);
+  padding: 32px 20px;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+}
+
+.brand {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 36px;
+  padding: 0 4px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: var(--or);
+  display: grid;
+  place-items: center;
+  color: var(--navy);
+  flex: none;
+}
+
+.brand b {
+  font-size: 19px;
+  display: block;
+  color: #fff;
+}
+
+.brand span {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+nav a {
+  text-decoration: none;
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  background: none;
+  border: 0;
+  color: var(--side-tx);
+  padding: 14px 16px;
+  border-radius: 12px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: left;
+}
+
+nav a:hover {
+  background: var(--navy2);
+}
+
+nav a.on {
+  background: var(--or);
+  color: var(--navy);
+}
+
+/* ---------- Kartu User ---------- */
+.user {
+  margin-top: auto;
+  background: var(--navy2);
+  border-radius: 14px;
+  padding: 14px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.av {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--teal);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  flex: none;
+}
+
+.user b {
+  display: block;
+  color: #fff;
+  font-size: 15px;
+}
+
+.user small {
+  opacity: 0.85;
+}
+
+.user a {
+  text-decoration: none;
+  margin-left: auto;
+  background: none;
+  border: 1px solid #ffffff40;
+  color: #fff;
+  border-radius: 8px;
+  padding: 5px 9px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+/* ---------- Tombol ---------- */
+.btn {
+  text-decoration: none;
+  background: var(--or);
+  color: var(--navy);
+  border: 0;
+  border-radius: 12px;
+  padding: 13px 22px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 16px;
+}
+
+.btn:hover {
+  filter: brightness(1.05);
+}
+
+.btn.ghost {
+  background: none;
+  border: 1px solid var(--line);
+  color: var(--tx);
+}
+
+/* ---------- Kartu & Link ---------- */
+.card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 24px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+a.lnk,
+.lnk {
+  text-decoration: none;
+  color: var(--teal);
+  font-weight: 700;
+  cursor: pointer;
+  background: none;
+  border: 0;
+  font-size: 15px;
+}
+
+/* ---------- Tabel ---------- */
+.tw {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 520px;
+}
+
+th {
+  text-align: left;
+  color: var(--mut);
+  font-size: 14px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+
+td {
+  padding: 16px 12px;
+  border-bottom: 1px solid var(--line);
+  font-size: 16px;
+}
+
+tr:last-child td {
+  border: 0;
+}
+
+td.r,
+th.r {
+  text-align: right;
+}
+
+td b {
+  font-weight: 700;
+}
+
+/* ---------- Form ---------- */
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+label.w {
+  grid-column: 1 / -1;
+}
+
+input,
+select,
+textarea {
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 16px;
+  width: 100%;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 2px solid var(--or);
+  border-color: transparent;
+}
+
+.del {
+  background: none;
+  border: 0;
+  color: #c0392b;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* ---------- Toast ---------- */
+.toast {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--navy);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 12px;
+  font-weight: 600;
+  z-index: 9;
+}
+
+/* ---------- Kotak Pencarian ---------- */
+.tools {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.search {
+  position: relative;
+}
+
+.search svg {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--mut);
+  pointer-events: none;
+}
+
+.search input {
+  width: 320px;
+  max-width: 100%;
+  padding: 12px 14px 12px 42px;
+  background: var(--card);
+}
+
+/* ---------- Kolom Keterangan Riwayat Servis ---------- */
+table.wide {
+  min-width: 900px;
+}
+
+.wide td {
+  vertical-align: top;
+}
+
+td.ket {
+  min-width: 280px;
+}
+
+.ketr {
+  display: block;
+  margin-bottom: 4px;
+}
+
+details summary {
+  color: var(--teal);
+  font-weight: 700;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+details dl {
+  margin: 8px 0 0;
+  font-size: 14px;
+  color: var(--mut);
+  line-height: 1.5;
+}
+
+details dt {
+  font-weight: 700;
+  color: var(--tx);
+}
+
+details dd {
+  margin: 0 0 6px;
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 860px) {
+  .shell {
+    grid-template-columns: 1fr;
+  }
+
+  aside {
+    position: static;
+    height: auto;
+    padding: 14px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .brand {
+    margin: 0;
+  }
+
+  nav {
+    flex-direction: row;
+    overflow-x: auto;
+    width: 100%;
+    order: 3;
+  }
+
+  nav a {
+    white-space: nowrap;
+    padding: 10px 14px;
+    font-size: 14px;
+  }
+
+  .user {
+    margin: 0 0 0 auto;
+    padding: 8px;
+  }
+
+  .user div {
+    display: none;
+  }
+
+  main {
+    padding: 22px 16px;
+  }
+
+  h1 {
+    font-size: 28px;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .tools,
+  .search,
+  .search input {
+    width: 100%;
+  }
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Catat Servis – Catat Servis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <div class="shell">
+
+    <!-- ================= Sidebar ================= -->
+    <aside>
+      <div class="brand">
+        <div class="logo">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M3 11h18v5H3zM6 16v2M18 16v2"/>
+          </svg>
+        </div>
+        <div>
+          <b>Catat Servis</b>
+          <span>Kendaraan Pribadi</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="dashboard.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 3h8v10H3zM13 3h8v6h-8zM13 11h8v10h-8zM3 15h8v6H3z"/>
+          </svg>
+          Dashboard
+        </a>
+
+        <a href="kendaraan.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M3 11h18v5H3zM6 16v2M18 16v2"/>
+          </svg>
+          Kendaraan Saya
+        </a>
+
+        <a href="catat-servis.html" class="on">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+          Catat Servis
+        </a>
+
+        <a href="riwayat.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18zM12 7v5l3 2"/>
+          </svg>
+          Riwayat Servis
+        </a>
+
+        <a href="pengingat.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 16V11a6 6 0 0 1 12 0v5l2 2H4zM10 21h4"/>
+          </svg>
+          Pengingat
+        </a>
+
+        <a href="informasi-produk.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 3l8 4.5v9L12 21l-8-4.5v-9zM4 7.5l8 4.5 8-4.5M12 12v9"/>
+          </svg>
+          Informasi Produk
+        </a>
+
+        <a href="laporan.html" class="">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4v16h16M8 16v-4M12 16V8M16 16v-6"/>
+          </svg>
+          Laporan
+        </a>
+      </nav>
+
+      <div class="user">
+        <div class="av">M</div>
+        <div>
+          <b>Mahasiswa</b>
+          <small>Pengguna</small>
+        </div>
+        <a href="login.html">Keluar</a>
+      </div>
+    </aside>
+
+    <!-- ================= Main ================= -->
+    <main>
+      <div class="head">
+        <div>
+          <h1>Catat Servis</h1>
+          <p class="sub">Tambahkan catatan perawatan baru</p>
+        </div>
+        <div class="tools">
+          <div class="search">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 4a7 7 0 1 0 0 14 7 7 0 0 0 0-14zM20 20l-4-4"/>
+            </svg>
+            <input id="q" type="search" placeholder="Cari servis, pengingat… (Enter = cari di Riwayat)" aria-label="Cari" autocomplete="off">
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <form id="fs">
+          <label>Tanggal
+            <input type="date" name="date" required>
+          </label>
+
+          <label>Kendaraan
+            <select name="v">
+              <option>Honda Beat 2021</option>
+            </select>
+          </label>
+
+          <label>Jenis perawatan
+            <select name="type">
+              <option>Ganti oli mesin</option>
+              <option>Servis berkala</option>
+              <option>Ganti kampas rem</option>
+              <option>Ganti ban</option>
+              <option>Ganti aki</option>
+              <option>Ganti busi</option>
+              <option>Servis CVT</option>
+              <option>Lainnya</option>
+              <option>Ganti filter udara</option>
+            </select>
+          </label>
+
+          <label>Odometer (km)
+            <input type="number" name="km" min="0" required>
+          </label>
+
+          <label>Biaya (Rp)
+            <input type="number" name="cost" min="0" value="0">
+          </label>
+
+          <label>Bengkel
+            <input name="shop" placeholder="Opsional">
+          </label>
+
+          <label class="w">Yang dikerjakan
+            <textarea name="work" rows="2" placeholder="Opsional"></textarea>
+          </label>
+
+          <label class="w">Catatan
+            <textarea name="note" rows="3" placeholder="Opsional"></textarea>
+          </label>
+
+          <div class="w">
+            <button class="btn">Simpan catatan</button>
+          </div>
+        </form>
+      </div>
+
+      <p id="nf" class="mut" hidden>Tidak ada hasil yang cocok dengan pencarian Anda.</p>
+    </main>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

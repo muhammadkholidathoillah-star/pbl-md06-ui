@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Masuk – Catat Servis</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <div class="login">
+
+    <!-- ================= Hero (Panel Kiri) ================= -->
+    <div class="hero">
+      <div class="brand">
+        <div class="logo">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 11l1.5-4.5A2 2 0 0 1 8.4 5h7.2a2 2 0 0 1 1.9 1.5L19 11M3 11h18v5H3zM6 16v2M18 16v2"/>
+          </svg>
+        </div>
+        <div>
+          <b>Catat Servis</b>
+          <span>Kendaraan Pribadi</span>
+        </div>
+      </div>
+
+      <div>
+        <h2>Riwayat servis kendaraan, rapi dalam satu tempat.</h2>
+        <p>Catat setiap perawatan, pantau odometer, dan jangan lewatkan jadwal servis berikutnya.</p>
+      </div>
+
+      <ul>
+        <li>Catat servis dalam hitungan detik</li>
+        <li>Pengingat jadwal servis otomatis</li>
+        <li>Laporan biaya perawatan bulanan</li>
+      </ul>
+    </div>
+
+    <!-- ================= Kotak Login (Panel Kanan) ================= -->
+    <div class="lbox">
+      <div class="card">
+        <h2 style="font-size:28px">Masuk</h2>
+        <p class="sub" style="margin-bottom:22px">Selamat datang kembali! Silakan masuk ke akun Anda.</p>
+
+        <form id="lf">
+          <label>Nama pengguna
+            <input name="user" autocomplete="username" placeholder="mahasiswa" required>
+          </label>
+
+          <label>Kata sandi
+            <input name="pass" type="password" autocomplete="current-password" placeholder="••••••" required>
+          </label>
+
+          <p class="err" id="err" role="alert"></p>
+
+          <button class="btn" style="justify-content:center">Masuk</button>
+        </form>
+
+        <p class="hint">Mode demo: isi nama pengguna dan kata sandi apa saja (min. 3 &amp; 4 karakter).</p>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

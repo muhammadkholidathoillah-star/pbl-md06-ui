@@ -1,0 +1,111 @@
+/* ============================================================
+   components.css - kartu statistik, grid, pengingat, ikon
+   (halaman dalam aplikasi)
+   ============================================================ */
+
+/* ---------- Kartu Statistik ---------- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 22px;
+}
+
+.stat small {
+  color: var(--mut);
+  font-weight: 500;
+}
+
+.stat .n {
+  font-size: 40px;
+  font-weight: 800;
+  margin: 6px 0 2px;
+  letter-spacing: -1px;
+}
+
+.stat.dark {
+  background: var(--navy);
+  border-color: var(--navy);
+  color: #fff;
+}
+
+.stat.dark small {
+  color: #dfe5f2;
+}
+
+.stat.dark em {
+  color: #f5b84a;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* ---------- Grid Kolom ---------- */
+.cols {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.grid3 {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+/* ---------- Pengingat ---------- */
+.rem {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.rem b {
+  display: block;
+}
+
+.rem span,
+.mut {
+  color: var(--mut);
+}
+
+/* ---------- Ikon ---------- */
+.ic {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  flex: none;
+  background: #fbe9c9;
+  color: var(--navy);
+}
+
+.ic.t {
+  background: #dcebee;
+}
+
+/* ---------- Responsif ---------- */
+@media (max-width: 1020px) {
+  .stats {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .stats {
+    grid-template-columns: 1fr;
+  }
+}
